@@ -3,12 +3,9 @@
 /*
  * main - The entry point
  *
- * Description: This is the main entry point
- * It prints _putchar
- *
+ * Description: 'This is the main entry point'
  * Return: 0 (Success)
  */
-
 int main(void)
 {
 	_putchar('_');
