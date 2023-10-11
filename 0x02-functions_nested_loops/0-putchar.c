@@ -1,11 +1,12 @@
 #include "main.h"
 
-/*
- * main - The entry point
+/**
+ * main - Entry point
  *
- * Description: 'This is the main entry point'
+ * description: This is the main entry point
  * Return: 0 (Success)
  */
+
 int main(void)
 {
 	_putchar('_');
