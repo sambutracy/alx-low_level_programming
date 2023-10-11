@@ -3,8 +3,11 @@
 /*
  * main - the entry point
  *
+ * Description: This is the main entry point
+ *It prints _putchar 
  * Return: 0 (Success)
  */
+
 int main(void)
 {
 	_putchar('_');
