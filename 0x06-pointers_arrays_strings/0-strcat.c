@@ -1,6 +1,6 @@
 #include "main.h"
 
-/* 
+/*
  * _strcat - it concentrates 2 strings
  * @dest: This is an input value
  * @src: this is an input value
@@ -12,7 +12,7 @@ char *_strcat(char *dest, char *src)
 	int t;
 	int j;
 	
-	t = 0;
+	t = '\0'
 	while (dest[t] != '\0')
 	{
 		t++;
@@ -25,6 +25,5 @@ char *_strcat(char *dest, char *src)
 		j++;
 	}
 	dest[t] = '\0';
-	
 	return (dest);
 }
