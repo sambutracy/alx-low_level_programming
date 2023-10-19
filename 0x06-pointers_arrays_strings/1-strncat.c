@@ -1,5 +1,5 @@
 #include "main.h"
-/*
+/**
  * _strncat - it concatenates two strings
  * using n bytes from src
  * @dest: the input value
@@ -11,7 +11,7 @@ char *_strncat(char *dest, char *src, int n)
 {
 	int t;
 	int j;
-	
+
 	t = 0;
 	while (dest[t] != '\0')
 	{
