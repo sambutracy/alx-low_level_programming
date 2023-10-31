@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * main: to print the arguments recieved
+ * main - to print the arguments recieved
  * @argc: argument count
  * @argv: argument vector
  *
