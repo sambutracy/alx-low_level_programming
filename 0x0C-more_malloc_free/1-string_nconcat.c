@@ -11,8 +11,8 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *result;
-	unsigned int len1 = 0, len2 = 0, i;
-	unsigned int total_length = 0;
+	unsigned int len1 = 0, len2 = 0;
+	unsigned int i, j;
 
 	if (s1 == NULL)
 		s1 = "";
@@ -24,33 +24,14 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		len2++;
 	if (n >= len2)
 		n = len2;
-	total_length = len1 + n;
-	result = (char *)malloc(sizeof(char) * (total_length + 1));
+	result = (char *)malloc(sizeof(char) * (len1 + n + 1));
 	if (result == NULL)
-		return (NULL);
+		exit(98);
 	for (i = 0; i < len1; i++)
 		result[i] = s1[i];
 	for (i = 0; i < n; i++)
-		result[len1 + i] = s2[i];
+		result[i + j] = s2[j];
 
-	result[total_length] = '\0';
+	result[i + j] = '\0';
 	return (result);
-}
-/**
- * main - Entry point for testing the string_nconcat function.
- * Return: Always 0.
- */
-int main(void)
-{
-	char s1[] = "Hello, ";
-	char s2[] = "World!";
-	char *concatenated;
-
-	concatenated = string_nconcat(s1, s2, 6);
-	if (concatenated != NULL)
-	{
-		printf("Concatenated: %s\n", concatenated);
-		free(concatenated);
-	}
-	return (0);
 }
