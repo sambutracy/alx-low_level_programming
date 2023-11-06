@@ -5,6 +5,13 @@
  */
 int main(void)
 {
-	printf("%s\n", __FILE__);
+	const char *filename = __FILE__;
+
+	while (*filename)
+	{
+		_putchar(*filename);
+		filename++;
+	}
+	_putchar('\n');
 	return (0);
 }
