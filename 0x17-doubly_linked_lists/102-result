@@ -1,0 +1,25 @@
+# 102-largest_palindrome.py
+
+def is_palindrome(number):
+    """Check if a number is a palindrome."""
+    str_number = str(number)
+    return str_number == str_number[::-1]
+
+def largest_palindrome():
+    """Find the largest palindrome made from the product of two 3-digit numbers."""
+    max_palindrome = 0
+
+    for i in range(100, 1000):
+        for j in range(i, 1000):
+            product = i * j
+            if is_palindrome(product) and product > max_palindrome:
+                max_palindrome = product
+
+    return max_palindrome
+
+if __name__ == "__main__":
+    result = largest_palindrome()
+
+    # Save the result to the file
+    with open("102-result", "w") as file:
+        file.write(str(result))
